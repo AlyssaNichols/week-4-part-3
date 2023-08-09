@@ -4,9 +4,35 @@ console.log('***** Cart Functions *****');
 
 let basket = [];
 
-function addItem()
+function addItem(item){
+    console.log('added item:', item)
+    basket.push(item);
+    return true;
+}
 
-function listItems()
+console.log(`Basket is ${basket}`);
+console.log('Adding apples (expect true)', addItem('apples'));
+console.log(`Basket is now ${basket}`);
 
-function empty()
+addItem('banana');
+addItem('orange');
+
+
+function listItems(){
+    for (i=0; i<basket.length; i++){
+        console.log(basket[i]);   
+    }
+}
+console.log('basket item 1', basket[0]);
+console.log('basket item 2', basket[1]);
+console.log('basket item 3', basket[2]);
+
+function empty(basket){
+    basket.length = 0;
+    return true
+}
+
+console.log('is basket empty?', empty(basket));
+
+console.log(basket);
 
