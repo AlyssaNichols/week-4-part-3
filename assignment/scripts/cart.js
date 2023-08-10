@@ -6,10 +6,23 @@ console.log('***** Cart Functions *****');
 const maxItems = 5;
 let basket = [];
 
+/* THIS IS THE ORIGINAL FUNCTION BEFORE THE STRETCH GOAL
+
 function addItem(item){
     console.log('added item:', item)
     basket.push(item);
     return true;
+}
+*/
+
+function addItem(item){
+    if (basket.length-1 < maxItems) {
+        console.log('added item:', item)
+        basket.push(item);
+        return true;
+    } else {
+        return false
+    }
 }
 
 console.log(`Basket is ${basket}`);
@@ -19,6 +32,7 @@ console.log(`Basket is now ${basket}`);
 addItem('banana');
 addItem('orange');
 
+//basket now contains 3 items: apple, banana, and orange.
 
 function listItems(){
     for (let i=0; i<basket.length; i++){
@@ -50,16 +64,6 @@ function isFull(){
 console.log("Is the basket full? (should return false)", isFull());
 
 
-
-function addItem(item){
-    if (basket.length-1 < maxItems) {
-        console.log('added item:', item)
-        basket.push(item);
-        return true;
-    } else {
-        return false
-    }
-}
 
 // filled basket back up with fruit using the addItem function
 
