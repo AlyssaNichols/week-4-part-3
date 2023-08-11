@@ -50,7 +50,6 @@ function empty(basket){
 
 console.log('is basket empty?', empty(basket));
 
-console.log(basket);
 
 //basket is reset back to an empty array
 
@@ -74,6 +73,6 @@ console.log(addItem("grape"));  // Output: true
 console.log(addItem("kiwi"));   // Output: true
 console.log(addItem("melon")); // no room, Output: false
 
-console.log("Is the basket full? (should return true)", isFull());
+console.log("What is in the basket?", basket);
 
 // couldn't figure out the last stretch goal but will continue to look at it and try to understand what it's asking for.
