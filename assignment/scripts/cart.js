@@ -16,7 +16,7 @@ function addItem(item){
 */
 
 function addItem(item){
-    if (basket.length-1 < maxItems) {
+    if (basket.length < maxItems) {
         console.log('added item:', item)
         basket.push(item);
         return true;
@@ -26,7 +26,7 @@ function addItem(item){
 }
 
 console.log(`Basket is ${basket}`);
-console.log('Adding apples (expect true)', addItem('apples'));
+console.log('Did I add apples (expect true)', addItem('apples'));
 console.log(`Basket is now ${basket}`);
 
 addItem('banana');
@@ -55,7 +55,7 @@ console.log(basket);
 //basket is reset back to an empty array
 
 function isFull(){
-    if (basket.length >= maxItems){
+    if (basket.length > maxItems){
         return true
     } else {
         return false
